@@ -33,9 +33,7 @@ Partial Class HomeDashboard
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse4 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.DtpBirthday = New System.Windows.Forms.DateTimePicker()
         Me.cmbYear = New System.Windows.Forms.ComboBox()
         Me.txtCourse = New System.Windows.Forms.ComboBox()
@@ -83,10 +81,10 @@ Partial Class HomeDashboard
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnPatientAdd = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -116,18 +114,20 @@ Partial Class HomeDashboard
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(422, 129)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(424, 96)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(190, 20)
+        Me.Label3.Size = New System.Drawing.Size(301, 18)
         Me.Label3.TabIndex = 67
-        Me.Label3.Text = "BASIC INFORMATION"
+        Me.Label3.Text = "STUDENTS BASIC INFORMATION"
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(1007, 11)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
@@ -140,6 +140,7 @@ Partial Class HomeDashboard
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(103, 19)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -167,93 +168,72 @@ Partial Class HomeDashboard
         'BunifuElipse4
         '
         Me.BunifuElipse4.ElipseRadius = 50
-        Me.BunifuElipse4.TargetControl = Me.Panel3
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.PictureBox5)
-        Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(27, 99)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(195, 80)
-        Me.Panel3.TabIndex = 91
+        Me.BunifuElipse4.TargetControl = Me
         '
         'PictureBox5
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(13, 13)
+        Me.PictureBox5.Location = New System.Drawing.Point(338, 68)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(55, 51)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.Size = New System.Drawing.Size(78, 74)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 2
         Me.PictureBox5.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(84, 32)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 20)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Students"
         '
         'DtpBirthday
         '
         Me.DtpBirthday.CustomFormat = "yyyy-MM-dd"
         Me.DtpBirthday.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DtpBirthday.Location = New System.Drawing.Point(867, 268)
+        Me.DtpBirthday.Location = New System.Drawing.Point(799, 173)
         Me.DtpBirthday.Margin = New System.Windows.Forms.Padding(2)
         Me.DtpBirthday.Name = "DtpBirthday"
-        Me.DtpBirthday.Size = New System.Drawing.Size(170, 22)
+        Me.DtpBirthday.Size = New System.Drawing.Size(84, 22)
         Me.DtpBirthday.TabIndex = 113
         '
         'cmbYear
         '
         Me.cmbYear.FormattingEnabled = True
-        Me.cmbYear.Location = New System.Drawing.Point(867, 214)
+        Me.cmbYear.Location = New System.Drawing.Point(593, 169)
         Me.cmbYear.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbYear.Name = "cmbYear"
-        Me.cmbYear.Size = New System.Drawing.Size(170, 28)
+        Me.cmbYear.Size = New System.Drawing.Size(128, 28)
         Me.cmbYear.TabIndex = 112
         '
         'txtCourse
         '
         Me.txtCourse.FormattingEnabled = True
-        Me.txtCourse.Location = New System.Drawing.Point(475, 214)
+        Me.txtCourse.Location = New System.Drawing.Point(384, 170)
         Me.txtCourse.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCourse.Name = "txtCourse"
-        Me.txtCourse.Size = New System.Drawing.Size(226, 28)
+        Me.txtCourse.Size = New System.Drawing.Size(205, 28)
         Me.txtCourse.TabIndex = 111
         '
         'txtRelationship
         '
         Me.txtRelationship.FormattingEnabled = True
-        Me.txtRelationship.Location = New System.Drawing.Point(165, 509)
+        Me.txtRelationship.Location = New System.Drawing.Point(718, 466)
         Me.txtRelationship.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRelationship.Name = "txtRelationship"
-        Me.txtRelationship.Size = New System.Drawing.Size(229, 28)
+        Me.txtRelationship.Size = New System.Drawing.Size(158, 28)
         Me.txtRelationship.TabIndex = 110
         '
         'cmbStatus
         '
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Location = New System.Drawing.Point(543, 415)
+        Me.cmbStatus.Location = New System.Drawing.Point(416, 349)
         Me.cmbStatus.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbStatus.Name = "cmbStatus"
-        Me.cmbStatus.Size = New System.Drawing.Size(158, 28)
+        Me.cmbStatus.Size = New System.Drawing.Size(121, 28)
         Me.cmbStatus.TabIndex = 107
         '
         'cmbNationality
         '
         Me.cmbNationality.FormattingEnabled = True
-        Me.cmbNationality.Location = New System.Drawing.Point(827, 410)
+        Me.cmbNationality.Location = New System.Drawing.Point(666, 349)
         Me.cmbNationality.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbNationality.Name = "cmbNationality"
         Me.cmbNationality.Size = New System.Drawing.Size(210, 28)
@@ -262,31 +242,31 @@ Partial Class HomeDashboard
         'txtGender
         '
         Me.txtGender.FormattingEnabled = True
-        Me.txtGender.Location = New System.Drawing.Point(423, 368)
+        Me.txtGender.Location = New System.Drawing.Point(416, 312)
         Me.txtGender.Margin = New System.Windows.Forms.Padding(2)
         Me.txtGender.Name = "txtGender"
-        Me.txtGender.Size = New System.Drawing.Size(146, 28)
+        Me.txtGender.Size = New System.Drawing.Size(121, 28)
         Me.txtGender.TabIndex = 108
         '
         'txtFirstname
         '
-        Me.txtFirstname.Location = New System.Drawing.Point(256, 265)
+        Me.txtFirstname.Location = New System.Drawing.Point(339, 205)
         Me.txtFirstname.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFirstname.Name = "txtFirstname"
-        Me.txtFirstname.Size = New System.Drawing.Size(296, 26)
+        Me.txtFirstname.Size = New System.Drawing.Size(250, 26)
         Me.txtFirstname.TabIndex = 94
         '
         'txtMiddlename
         '
-        Me.txtMiddlename.Location = New System.Drawing.Point(556, 265)
+        Me.txtMiddlename.Location = New System.Drawing.Point(593, 205)
         Me.txtMiddlename.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMiddlename.Name = "txtMiddlename"
-        Me.txtMiddlename.Size = New System.Drawing.Size(74, 26)
+        Me.txtMiddlename.Size = New System.Drawing.Size(64, 26)
         Me.txtMiddlename.TabIndex = 95
         '
         'txtCNumber
         '
-        Me.txtCNumber.Location = New System.Drawing.Point(630, 509)
+        Me.txtCNumber.Location = New System.Drawing.Point(180, 502)
         Me.txtCNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCNumber.Name = "txtCNumber"
         Me.txtCNumber.Size = New System.Drawing.Size(178, 26)
@@ -294,7 +274,7 @@ Partial Class HomeDashboard
         '
         'txtRelatives
         '
-        Me.txtRelatives.Location = New System.Drawing.Point(634, 459)
+        Me.txtRelatives.Location = New System.Drawing.Point(180, 466)
         Me.txtRelatives.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRelatives.Name = "txtRelatives"
         Me.txtRelatives.Size = New System.Drawing.Size(403, 26)
@@ -302,15 +282,15 @@ Partial Class HomeDashboard
         '
         'txtSurname
         '
-        Me.txtSurname.Location = New System.Drawing.Point(88, 265)
+        Me.txtSurname.Location = New System.Drawing.Point(125, 205)
         Me.txtSurname.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSurname.Name = "txtSurname"
-        Me.txtSurname.Size = New System.Drawing.Size(163, 26)
+        Me.txtSurname.Size = New System.Drawing.Size(210, 26)
         Me.txtSurname.TabIndex = 99
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(165, 368)
+        Me.txtPhone.Location = New System.Drawing.Point(127, 315)
         Me.txtPhone.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(168, 26)
@@ -318,23 +298,23 @@ Partial Class HomeDashboard
         '
         'txtBP
         '
-        Me.txtBP.Location = New System.Drawing.Point(370, 415)
+        Me.txtBP.Location = New System.Drawing.Point(902, 312)
         Me.txtBP.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBP.Name = "txtBP"
-        Me.txtBP.Size = New System.Drawing.Size(81, 26)
+        Me.txtBP.Size = New System.Drawing.Size(130, 26)
         Me.txtBP.TabIndex = 101
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(126, 327)
+        Me.txtAddress.Location = New System.Drawing.Point(127, 274)
         Me.txtAddress.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(911, 26)
+        Me.txtAddress.Size = New System.Drawing.Size(905, 26)
         Me.txtAddress.TabIndex = 102
         '
         'txtBloodType
         '
-        Me.txtBloodType.Location = New System.Drawing.Point(133, 415)
+        Me.txtBloodType.Location = New System.Drawing.Point(665, 313)
         Me.txtBloodType.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBloodType.Name = "txtBloodType"
         Me.txtBloodType.Size = New System.Drawing.Size(71, 26)
@@ -342,250 +322,262 @@ Partial Class HomeDashboard
         '
         'txtWeight
         '
-        Me.txtWeight.Location = New System.Drawing.Point(956, 371)
+        Me.txtWeight.Location = New System.Drawing.Point(961, 205)
         Me.txtWeight.Margin = New System.Windows.Forms.Padding(2)
         Me.txtWeight.Name = "txtWeight"
-        Me.txtWeight.Size = New System.Drawing.Size(81, 26)
+        Me.txtWeight.Size = New System.Drawing.Size(71, 26)
         Me.txtWeight.TabIndex = 104
         '
         'txtReligion
         '
-        Me.txtReligion.Location = New System.Drawing.Point(114, 462)
+        Me.txtReligion.Location = New System.Drawing.Point(128, 352)
         Me.txtReligion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtReligion.Name = "txtReligion"
-        Me.txtReligion.Size = New System.Drawing.Size(280, 26)
+        Me.txtReligion.Size = New System.Drawing.Size(168, 26)
         Me.txtReligion.TabIndex = 106
         '
         'txtHeight
         '
-        Me.txtHeight.Location = New System.Drawing.Point(792, 369)
+        Me.txtHeight.Location = New System.Drawing.Point(799, 205)
         Me.txtHeight.Margin = New System.Windows.Forms.Padding(2)
         Me.txtHeight.Name = "txtHeight"
-        Me.txtHeight.Size = New System.Drawing.Size(66, 26)
+        Me.txtHeight.Size = New System.Drawing.Size(84, 26)
         Me.txtHeight.TabIndex = 105
         '
         'txtPrefix
         '
-        Me.txtPrefix.Location = New System.Drawing.Point(634, 265)
+        Me.txtPrefix.Location = New System.Drawing.Point(661, 205)
         Me.txtPrefix.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrefix.Name = "txtPrefix"
-        Me.txtPrefix.Size = New System.Drawing.Size(67, 26)
+        Me.txtPrefix.Size = New System.Drawing.Size(60, 26)
         Me.txtPrefix.TabIndex = 93
         '
         'txtAge
         '
-        Me.txtAge.Location = New System.Drawing.Point(634, 370)
+        Me.txtAge.Location = New System.Drawing.Point(961, 171)
         Me.txtAge.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAge.Name = "txtAge"
-        Me.txtAge.Size = New System.Drawing.Size(67, 26)
+        Me.txtAge.Size = New System.Drawing.Size(71, 26)
         Me.txtAge.TabIndex = 92
         '
         'txtStudentID
         '
-        Me.txtStudentID.Location = New System.Drawing.Point(165, 214)
+        Me.txtStudentID.Location = New System.Drawing.Point(125, 171)
         Me.txtStudentID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtStudentID.Name = "txtStudentID"
-        Me.txtStudentID.Size = New System.Drawing.Size(168, 26)
+        Me.txtStudentID.Size = New System.Drawing.Size(136, 26)
         Me.txtStudentID.TabIndex = 97
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(348, 219)
+        Me.Label7.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(279, 176)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(79, 18)
+        Me.Label7.Size = New System.Drawing.Size(102, 16)
         Me.Label7.TabIndex = 69
-        Me.Label7.Text = "COURSE"
+        Me.Label7.Text = "COURSE/YR: "
         '
         'Label24
         '
         Me.Label24.AutoSize = True
         Me.Label24.BackColor = System.Drawing.Color.Transparent
-        Me.Label24.Location = New System.Drawing.Point(213, 418)
+        Me.Label24.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label24.Location = New System.Drawing.Point(752, 316)
         Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(159, 20)
+        Me.Label24.Size = New System.Drawing.Size(146, 17)
         Me.Label24.TabIndex = 70
-        Me.Label24.Text = "BLOOD PRESSURE"
+        Me.Label24.Text = "BLOOD PRESSURE:"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.Color.Transparent
-        Me.Label21.Location = New System.Drawing.Point(24, 374)
+        Me.Label21.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label21.Location = New System.Drawing.Point(24, 316)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(139, 20)
+        Me.Label21.Size = New System.Drawing.Size(48, 17)
         Me.Label21.TabIndex = 71
-        Me.Label21.Text = "PHONE NUMBER"
+        Me.Label21.Text = "CP#: "
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Location = New System.Drawing.Point(26, 418)
+        Me.Label17.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label17.Location = New System.Drawing.Point(552, 316)
         Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(110, 20)
+        Me.Label17.Size = New System.Drawing.Size(105, 17)
         Me.Label17.TabIndex = 72
-        Me.Label17.Text = "BLOOD TYPE"
+        Me.Label17.Text = "BLOOD TYPE:"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(740, 217)
+        Me.Label15.Location = New System.Drawing.Point(541, 175)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(56, 18)
+        Me.Label15.Size = New System.Drawing.Size(0, 18)
         Me.Label15.TabIndex = 73
-        Me.Label15.Text = "YEAR:"
         '
         'Label30
         '
         Me.Label30.AutoSize = True
         Me.Label30.BackColor = System.Drawing.Color.Transparent
-        Me.Label30.Location = New System.Drawing.Point(24, 465)
+        Me.Label30.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label30.Location = New System.Drawing.Point(25, 353)
         Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(87, 20)
+        Me.Label30.Size = New System.Drawing.Size(83, 17)
         Me.Label30.TabIndex = 76
-        Me.Label30.Text = "RELIGION"
+        Me.Label30.Text = "RELIGION:"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Location = New System.Drawing.Point(462, 420)
+        Me.Label18.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label18.Location = New System.Drawing.Point(343, 353)
         Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(72, 20)
+        Me.Label18.Size = New System.Drawing.Size(70, 17)
         Me.Label18.TabIndex = 77
-        Me.Label18.Text = "STATUS"
+        Me.Label18.Text = "STATUS:"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.BackColor = System.Drawing.Color.Transparent
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(740, 268)
+        Me.Label26.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label26.Location = New System.Drawing.Point(734, 171)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(94, 18)
+        Me.Label26.Size = New System.Drawing.Size(52, 34)
         Me.Label26.TabIndex = 74
-        Me.Label26.Text = "BIRTHDAY:"
+        Me.Label26.Text = "BIRTH" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DATE:"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Location = New System.Drawing.Point(714, 418)
+        Me.Label13.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label13.Location = New System.Drawing.Point(553, 353)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(113, 20)
+        Me.Label13.Size = New System.Drawing.Size(108, 17)
         Me.Label13.TabIndex = 78
-        Me.Label13.Text = "NATIONALITY"
+        Me.Label13.Text = "NATIONALITY:"
         '
         'Label25
         '
         Me.Label25.AutoSize = True
         Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Location = New System.Drawing.Point(24, 509)
+        Me.Label25.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label25.Location = New System.Drawing.Point(594, 470)
         Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(127, 20)
+        Me.Label25.Size = New System.Drawing.Size(118, 17)
         Me.Label25.TabIndex = 75
-        Me.Label25.Text = "RELATIONSHIP"
+        Me.Label25.Text = "RELATIONSHIP:"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Location = New System.Drawing.Point(344, 371)
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label11.Location = New System.Drawing.Point(337, 316)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(79, 20)
+        Me.Label11.Size = New System.Drawing.Size(74, 17)
         Me.Label11.TabIndex = 79
-        Me.Label11.Text = "GENDER"
+        Me.Label11.Text = "GENDER:"
         '
         'Label29
         '
         Me.Label29.AutoSize = True
         Me.Label29.BackColor = System.Drawing.Color.Transparent
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(24, 333)
+        Me.Label29.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label29.Location = New System.Drawing.Point(25, 276)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(87, 18)
+        Me.Label29.Size = New System.Drawing.Size(85, 17)
         Me.Label29.TabIndex = 80
-        Me.Label29.Text = "ADDRESS"
+        Me.Label29.Text = "ADDRESS:"
         '
         'Label23
         '
         Me.Label23.AutoSize = True
         Me.Label23.BackColor = System.Drawing.Color.Transparent
-        Me.Label23.Location = New System.Drawing.Point(873, 373)
+        Me.Label23.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label23.Location = New System.Drawing.Point(888, 210)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(74, 20)
+        Me.Label23.Size = New System.Drawing.Size(72, 17)
         Me.Label23.TabIndex = 81
-        Me.Label23.Text = "WEIGHT"
+        Me.Label23.Text = "WEIGHT:"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.Transparent
-        Me.Label22.Location = New System.Drawing.Point(720, 374)
+        Me.Label22.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label22.Location = New System.Drawing.Point(734, 210)
         Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(75, 20)
+        Me.Label22.Size = New System.Drawing.Size(67, 17)
         Me.Label22.TabIndex = 82
-        Me.Label22.Text = "HEIGHT "
+        Me.Label22.Text = "HEIGHT:"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Location = New System.Drawing.Point(462, 512)
+        Me.Label20.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label20.Location = New System.Drawing.Point(25, 506)
         Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(157, 20)
+        Me.Label20.Size = New System.Drawing.Size(147, 17)
         Me.Label20.TabIndex = 83
-        Me.Label20.Text = "CONTACT NUMBER"
+        Me.Label20.Text = "CONTACT NUMBER:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(587, 374)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label1.Location = New System.Drawing.Point(916, 176)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 20)
+        Me.Label1.Size = New System.Drawing.Size(44, 17)
         Me.Label1.TabIndex = 84
-        Me.Label1.Text = "AGE"
+        Me.Label1.Text = "AGE:"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Location = New System.Drawing.Point(472, 465)
+        Me.Label19.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label19.Location = New System.Drawing.Point(25, 470)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(149, 20)
+        Me.Label19.Size = New System.Drawing.Size(138, 17)
         Me.Label19.TabIndex = 85
-        Me.Label19.Text = "RELATIVES NAME"
+        Me.Label19.Text = "RELATIVES NAME:"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label10.Location = New System.Drawing.Point(355, 296)
+        Me.Label10.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label10.Location = New System.Drawing.Point(424, 233)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(85, 16)
@@ -597,8 +589,8 @@ Partial Class HomeDashboard
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label14.Location = New System.Drawing.Point(640, 296)
+        Me.Label14.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label14.Location = New System.Drawing.Point(667, 232)
         Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(54, 16)
@@ -610,8 +602,8 @@ Partial Class HomeDashboard
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label9.Location = New System.Drawing.Point(579, 296)
+        Me.Label9.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label9.Location = New System.Drawing.Point(611, 233)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(24, 16)
@@ -622,21 +614,21 @@ Partial Class HomeDashboard
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 268)
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label4.Location = New System.Drawing.Point(22, 210)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 18)
+        Me.Label4.Size = New System.Drawing.Size(54, 17)
         Me.Label4.TabIndex = 90
-        Me.Label4.Text = "NAME"
+        Me.Label4.Text = "NAME:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label8.Location = New System.Drawing.Point(127, 296)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.Label8.Location = New System.Drawing.Point(186, 233)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 16)
@@ -647,19 +639,23 @@ Partial Class HomeDashboard
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(24, 220)
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(22, 176)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 18)
+        Me.Label5.Size = New System.Drawing.Size(96, 16)
         Me.Label5.TabIndex = 68
-        Me.Label5.Text = "STUDENT ID"
+        Me.Label5.Text = "STUDENT ID:"
         '
         'btnClear
         '
-        Me.btnClear.BackColor = System.Drawing.Color.Red
+        Me.btnClear.BackColor = System.Drawing.Color.Firebrick
+        Me.btnClear.FlatAppearance.BorderSize = 0
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.White
         Me.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClear.Location = New System.Drawing.Point(556, 571)
+        Me.btnClear.Location = New System.Drawing.Point(910, 581)
         Me.btnClear.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(122, 36)
@@ -669,15 +665,31 @@ Partial Class HomeDashboard
         '
         'btnPatientAdd
         '
-        Me.btnPatientAdd.BackColor = System.Drawing.Color.Lime
+        Me.btnPatientAdd.BackColor = System.Drawing.Color.Teal
+        Me.btnPatientAdd.FlatAppearance.BorderSize = 0
+        Me.btnPatientAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPatientAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPatientAdd.ForeColor = System.Drawing.Color.White
         Me.btnPatientAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPatientAdd.Location = New System.Drawing.Point(354, 571)
+        Me.btnPatientAdd.Location = New System.Drawing.Point(761, 581)
         Me.btnPatientAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPatientAdd.Name = "btnPatientAdd"
         Me.btnPatientAdd.Size = New System.Drawing.Size(122, 36)
         Me.btnPatientAdd.TabIndex = 117
         Me.btnPatientAdd.Text = "ADD"
         Me.btnPatientAdd.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(26, 418)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(211, 18)
+        Me.Label6.TabIndex = 90
+        Me.Label6.Text = "EMERGENCY CONTACT"
         '
         'HomeDashboard
         '
@@ -686,6 +698,7 @@ Partial Class HomeDashboard
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1061, 650)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnPatientAdd)
         Me.Controls.Add(Me.Label3)
@@ -712,7 +725,6 @@ Partial Class HomeDashboard
         Me.Controls.Add(Me.txtPrefix)
         Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.txtStudentID)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.Label21)
@@ -733,6 +745,7 @@ Partial Class HomeDashboard
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label5)
@@ -743,13 +756,11 @@ Partial Class HomeDashboard
         Me.MinimizeBox = False
         Me.Name = "HomeDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "HomeDashboard"
+        Me.Text = "`"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -785,9 +796,7 @@ Partial Class HomeDashboard
     Friend WithEvents txtPrefix As TextBox
     Friend WithEvents txtAge As TextBox
     Friend WithEvents txtStudentID As TextBox
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label21 As Label
@@ -814,4 +823,5 @@ Partial Class HomeDashboard
     Friend WithEvents BunifuElipse4 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents btnClear As Button
     Friend WithEvents btnPatientAdd As Button
+    Friend WithEvents Label6 As Label
 End Class

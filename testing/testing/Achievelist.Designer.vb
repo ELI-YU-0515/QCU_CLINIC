@@ -130,7 +130,7 @@ Partial Class Achievelist
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Label1.Location = New System.Drawing.Point(216, 55)
+        Me.Label1.Location = New System.Drawing.Point(63, 134)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(105, 16)
         Me.Label1.TabIndex = 11
@@ -139,10 +139,10 @@ Partial Class Achievelist
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Amiri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(41, -21)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(25, 22)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(195, 146)
+        Me.Label4.Size = New System.Drawing.Size(161, 39)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Archieve"
         '

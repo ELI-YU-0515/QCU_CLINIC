@@ -25,6 +25,7 @@ Partial Class Stats
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Stats))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BunifuChartCanvas1 = New Bunifu.Charts.WinForms.BunifuChartCanvas()
         Me.BunifuChartCanvas2 = New Bunifu.Charts.WinForms.BunifuChartCanvas()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -37,7 +38,6 @@ Partial Class Stats
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.BunifuChartCanvas1 = New Bunifu.Charts.WinForms.BunifuChartCanvas()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,12 +47,71 @@ Partial Class Stats
         'Panel1
         '
         Me.Panel1.AutoScroll = True
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.BunifuChartCanvas1)
         Me.Panel1.Controls.Add(Me.BunifuChartCanvas2)
         Me.Panel1.Location = New System.Drawing.Point(2, 130)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(749, 431)
         Me.Panel1.TabIndex = 0
+        '
+        'BunifuChartCanvas1
+        '
+        Me.BunifuChartCanvas1.AnimationDuration = 1000
+        Me.BunifuChartCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart
+        Me.BunifuChartCanvas1.BackColor = System.Drawing.Color.White
+        Me.BunifuChartCanvas1.CanvasPadding = New System.Windows.Forms.Padding(0)
+        Me.BunifuChartCanvas1.Labels = Nothing
+        Me.BunifuChartCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center
+        Me.BunifuChartCanvas1.LegendDisplay = True
+        Me.BunifuChartCanvas1.LegendFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuChartCanvas1.LegendForeColor = System.Drawing.Color.DarkGray
+        Me.BunifuChartCanvas1.LegendFullWidth = True
+        Me.BunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top
+        Me.BunifuChartCanvas1.LegendRevese = False
+        Me.BunifuChartCanvas1.LegendRTL = False
+        Me.BunifuChartCanvas1.Location = New System.Drawing.Point(42, 31)
+        Me.BunifuChartCanvas1.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuChartCanvas1.Name = "BunifuChartCanvas1"
+        Me.BunifuChartCanvas1.ShowXAxis = True
+        Me.BunifuChartCanvas1.ShowYAxis = True
+        Me.BunifuChartCanvas1.Size = New System.Drawing.Size(638, 321)
+        Me.BunifuChartCanvas1.TabIndex = 3
+        Me.BunifuChartCanvas1.Title = ""
+        Me.BunifuChartCanvas1.TitleLineHeight = 1.2R
+        Me.BunifuChartCanvas1.TitlePadding = 10
+        Me.BunifuChartCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top
+        Me.BunifuChartCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BunifuChartCanvas1.TooltipFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BunifuChartCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BunifuChartCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest
+        Me.BunifuChartCanvas1.TooltipsEnabled = True
+        Me.BunifuChartCanvas1.XAxesBeginAtZero = True
+        Me.BunifuChartCanvas1.XAxesDrawTicks = True
+        Me.BunifuChartCanvas1.XAxesFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BunifuChartCanvas1.XAxesForeColor = System.Drawing.SystemColors.ControlText
+        Me.BunifuChartCanvas1.XAxesGridColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BunifuChartCanvas1.XAxesGridLines = True
+        Me.BunifuChartCanvas1.XAxesLabel = ""
+        Me.BunifuChartCanvas1.XAxesLabelFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BunifuChartCanvas1.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText
+        Me.BunifuChartCanvas1.XAxesLineWidth = 1
+        Me.BunifuChartCanvas1.XAxesStacked = False
+        Me.BunifuChartCanvas1.XAxesZeroLineColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BunifuChartCanvas1.XAxesZeroLineWidth = 1
+        Me.BunifuChartCanvas1.YAxesBeginAtZero = True
+        Me.BunifuChartCanvas1.YAxesDrawTicks = True
+        Me.BunifuChartCanvas1.YAxesFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BunifuChartCanvas1.YAxesForeColor = System.Drawing.SystemColors.ControlText
+        Me.BunifuChartCanvas1.YAxesGridColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BunifuChartCanvas1.YAxesGridLines = True
+        Me.BunifuChartCanvas1.YAxesLabel = ""
+        Me.BunifuChartCanvas1.YAxesLabelFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BunifuChartCanvas1.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText
+        Me.BunifuChartCanvas1.YAxesLineWidth = 1
+        Me.BunifuChartCanvas1.YAxesStacked = False
+        Me.BunifuChartCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BunifuChartCanvas1.YAxesZeroLineWidth = 1
         '
         'BunifuChartCanvas2
         '
@@ -115,15 +174,19 @@ Partial Class Stats
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(859, 190)
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(859, 188)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(164, 67)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Students"
+        Me.Button1.Text = "STUDENTS"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(781, 185)
         Me.PictureBox1.Name = "PictureBox1"
@@ -135,15 +198,19 @@ Partial Class Stats
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(859, 302)
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(859, 300)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(164, 67)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Faculty"
+        Me.Button2.Text = "FACULTY"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(781, 297)
         Me.PictureBox2.Name = "PictureBox2"
@@ -155,15 +222,19 @@ Partial Class Stats
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(859, 415)
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(859, 413)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(164, 67)
         Me.Button3.TabIndex = 1
-        Me.Button3.Text = "Staff"
+        Me.Button3.Text = "STAFF"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'PictureBox3
         '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(781, 410)
         Me.PictureBox3.Name = "PictureBox3"
@@ -177,7 +248,7 @@ Partial Class Stats
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Label2.Location = New System.Drawing.Point(222, 57)
+        Me.Label2.Location = New System.Drawing.Point(238, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 16)
         Me.Label2.TabIndex = 9
@@ -186,10 +257,10 @@ Partial Class Stats
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Amiri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(19, -19)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(37, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(225, 146)
+        Me.Label1.Size = New System.Drawing.Size(195, 39)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Dashboard"
         '
@@ -207,64 +278,6 @@ Partial Class Stats
         '
         Me.BunifuElipse3.ElipseRadius = 50
         Me.BunifuElipse3.TargetControl = Me.Button3
-        '
-        'BunifuChartCanvas1
-        '
-        Me.BunifuChartCanvas1.AnimationDuration = 1000
-        Me.BunifuChartCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart
-        Me.BunifuChartCanvas1.BackColor = System.Drawing.Color.White
-        Me.BunifuChartCanvas1.CanvasPadding = New System.Windows.Forms.Padding(0)
-        Me.BunifuChartCanvas1.Labels = Nothing
-        Me.BunifuChartCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center
-        Me.BunifuChartCanvas1.LegendDisplay = True
-        Me.BunifuChartCanvas1.LegendFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuChartCanvas1.LegendForeColor = System.Drawing.Color.DarkGray
-        Me.BunifuChartCanvas1.LegendFullWidth = True
-        Me.BunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top
-        Me.BunifuChartCanvas1.LegendRevese = False
-        Me.BunifuChartCanvas1.LegendRTL = False
-        Me.BunifuChartCanvas1.Location = New System.Drawing.Point(42, 31)
-        Me.BunifuChartCanvas1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.BunifuChartCanvas1.Name = "BunifuChartCanvas1"
-        Me.BunifuChartCanvas1.ShowXAxis = True
-        Me.BunifuChartCanvas1.ShowYAxis = True
-        Me.BunifuChartCanvas1.Size = New System.Drawing.Size(638, 321)
-        Me.BunifuChartCanvas1.TabIndex = 3
-        Me.BunifuChartCanvas1.Title = ""
-        Me.BunifuChartCanvas1.TitleLineHeight = 1.2R
-        Me.BunifuChartCanvas1.TitlePadding = 10
-        Me.BunifuChartCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top
-        Me.BunifuChartCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BunifuChartCanvas1.TooltipFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BunifuChartCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BunifuChartCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest
-        Me.BunifuChartCanvas1.TooltipsEnabled = True
-        Me.BunifuChartCanvas1.XAxesBeginAtZero = True
-        Me.BunifuChartCanvas1.XAxesDrawTicks = True
-        Me.BunifuChartCanvas1.XAxesFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BunifuChartCanvas1.XAxesForeColor = System.Drawing.SystemColors.ControlText
-        Me.BunifuChartCanvas1.XAxesGridColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BunifuChartCanvas1.XAxesGridLines = True
-        Me.BunifuChartCanvas1.XAxesLabel = ""
-        Me.BunifuChartCanvas1.XAxesLabelFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BunifuChartCanvas1.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText
-        Me.BunifuChartCanvas1.XAxesLineWidth = 1
-        Me.BunifuChartCanvas1.XAxesStacked = False
-        Me.BunifuChartCanvas1.XAxesZeroLineColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BunifuChartCanvas1.XAxesZeroLineWidth = 1
-        Me.BunifuChartCanvas1.YAxesBeginAtZero = True
-        Me.BunifuChartCanvas1.YAxesDrawTicks = True
-        Me.BunifuChartCanvas1.YAxesFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BunifuChartCanvas1.YAxesForeColor = System.Drawing.SystemColors.ControlText
-        Me.BunifuChartCanvas1.YAxesGridColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BunifuChartCanvas1.YAxesGridLines = True
-        Me.BunifuChartCanvas1.YAxesLabel = ""
-        Me.BunifuChartCanvas1.YAxesLabelFont = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BunifuChartCanvas1.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText
-        Me.BunifuChartCanvas1.YAxesLineWidth = 1
-        Me.BunifuChartCanvas1.YAxesStacked = False
-        Me.BunifuChartCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BunifuChartCanvas1.YAxesZeroLineWidth = 1
         '
         'Stats
         '
@@ -286,7 +299,7 @@ Partial Class Stats
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Stats"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Stats"
+        Me.Text = "v"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

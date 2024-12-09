@@ -46,7 +46,7 @@ Partial Class Dashboard
         '
         'mainpanel
         '
-        Me.mainpanel.BackColor = System.Drawing.Color.RoyalBlue
+        Me.mainpanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.mainpanel.Controls.Add(Me.btnSignOut)
         Me.mainpanel.Controls.Add(Me.PictureBox1)
         Me.mainpanel.Controls.Add(Me.btnArchieve)
@@ -54,14 +54,16 @@ Partial Class Dashboard
         Me.mainpanel.Controls.Add(Me.btnPatientsList)
         Me.mainpanel.Controls.Add(Me.btnDashboard)
         Me.mainpanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.mainpanel.Location = New System.Drawing.Point(0, 70)
+        Me.mainpanel.Location = New System.Drawing.Point(0, 51)
         Me.mainpanel.Name = "mainpanel"
-        Me.mainpanel.Size = New System.Drawing.Size(300, 630)
+        Me.mainpanel.Size = New System.Drawing.Size(265, 649)
         Me.mainpanel.TabIndex = 0
         '
         'btnSignOut
         '
-        Me.btnSignOut.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnSignOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.btnSignOut.FlatAppearance.BorderSize = 0
+        Me.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSignOut.ForeColor = System.Drawing.Color.White
         Me.btnSignOut.Image = CType(resources.GetObject("btnSignOut.Image"), System.Drawing.Image)
         Me.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -75,68 +77,76 @@ Partial Class Dashboard
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(64, 18)
+        Me.PictureBox1.Location = New System.Drawing.Point(41, 24)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(160, 160)
+        Me.PictureBox1.Size = New System.Drawing.Size(188, 181)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'btnArchieve
         '
-        Me.btnArchieve.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnArchieve.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.btnArchieve.FlatAppearance.BorderSize = 0
+        Me.btnArchieve.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnArchieve.ForeColor = System.Drawing.Color.White
         Me.btnArchieve.Image = CType(resources.GetObject("btnArchieve.Image"), System.Drawing.Image)
         Me.btnArchieve.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnArchieve.Location = New System.Drawing.Point(1, 441)
         Me.btnArchieve.Name = "btnArchieve"
-        Me.btnArchieve.Size = New System.Drawing.Size(300, 55)
+        Me.btnArchieve.Size = New System.Drawing.Size(262, 55)
         Me.btnArchieve.TabIndex = 0
         Me.btnArchieve.Text = "CLINIC ARCHIEVE"
         Me.btnArchieve.UseVisualStyleBackColor = False
         '
         'btnHome
         '
-        Me.btnHome.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.btnHome.FlatAppearance.BorderSize = 0
+        Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnHome.ForeColor = System.Drawing.Color.White
         Me.btnHome.Image = CType(resources.GetObject("btnHome.Image"), System.Drawing.Image)
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHome.Location = New System.Drawing.Point(0, 233)
         Me.btnHome.Name = "btnHome"
-        Me.btnHome.Size = New System.Drawing.Size(300, 55)
+        Me.btnHome.Size = New System.Drawing.Size(262, 55)
         Me.btnHome.TabIndex = 0
         Me.btnHome.Text = "HOME"
         Me.btnHome.UseVisualStyleBackColor = False
         '
         'btnPatientsList
         '
-        Me.btnPatientsList.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnPatientsList.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.btnPatientsList.FlatAppearance.BorderSize = 0
+        Me.btnPatientsList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPatientsList.ForeColor = System.Drawing.Color.White
         Me.btnPatientsList.Image = CType(resources.GetObject("btnPatientsList.Image"), System.Drawing.Image)
         Me.btnPatientsList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPatientsList.Location = New System.Drawing.Point(1, 370)
         Me.btnPatientsList.Name = "btnPatientsList"
-        Me.btnPatientsList.Size = New System.Drawing.Size(300, 55)
+        Me.btnPatientsList.Size = New System.Drawing.Size(262, 55)
         Me.btnPatientsList.TabIndex = 0
         Me.btnPatientsList.Text = "PATIENTS LIST"
         Me.btnPatientsList.UseVisualStyleBackColor = False
         '
         'btnDashboard
         '
-        Me.btnDashboard.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(195, Byte), Integer))
+        Me.btnDashboard.FlatAppearance.BorderSize = 0
+        Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDashboard.ForeColor = System.Drawing.Color.White
         Me.btnDashboard.Image = CType(resources.GetObject("btnDashboard.Image"), System.Drawing.Image)
         Me.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDashboard.Location = New System.Drawing.Point(0, 299)
         Me.btnDashboard.Name = "btnDashboard"
-        Me.btnDashboard.Size = New System.Drawing.Size(300, 55)
+        Me.btnDashboard.Size = New System.Drawing.Size(262, 55)
         Me.btnDashboard.TabIndex = 0
         Me.btnDashboard.Text = "DASHBOARD"
         Me.btnDashboard.UseVisualStyleBackColor = False
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -145,13 +155,13 @@ Partial Class Dashboard
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1356, 70)
+        Me.Panel2.Size = New System.Drawing.Size(1356, 51)
         Me.Panel2.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(1032, 31)
+        Me.Label3.Location = New System.Drawing.Point(914, 18)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 20)
         Me.Label3.TabIndex = 4
@@ -160,7 +170,7 @@ Partial Class Dashboard
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(296, 31)
+        Me.Label2.Location = New System.Drawing.Point(293, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 20)
         Me.Label2.TabIndex = 4
@@ -170,8 +180,8 @@ Partial Class Dashboard
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(65, 22)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(60, 11)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(159, 29)
         Me.Label1.TabIndex = 3
@@ -186,12 +196,13 @@ Partial Class Dashboard
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button5.BackColor = System.Drawing.Color.Firebrick
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(1284, 8)
+        Me.Button5.Location = New System.Drawing.Point(1301, 8)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(60, 55)
+        Me.Button5.Size = New System.Drawing.Size(43, 37)
         Me.Button5.TabIndex = 0
         Me.Button5.Text = "X"
         Me.Button5.UseVisualStyleBackColor = False
@@ -199,9 +210,9 @@ Partial Class Dashboard
         'Panel5
         '
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(300, 70)
+        Me.Panel5.Location = New System.Drawing.Point(265, 51)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1056, 630)
+        Me.Panel5.Size = New System.Drawing.Size(1091, 649)
         Me.Panel5.TabIndex = 2
         '
         'Timer1

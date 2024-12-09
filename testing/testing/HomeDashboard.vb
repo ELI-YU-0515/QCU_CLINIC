@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Drawing.Drawing2D
+Imports MySql.Data.MySqlClient
 
 Public Class HomeDashboard
 
@@ -11,7 +12,11 @@ Public Class HomeDashboard
 
     End Sub
 
+
+
+
     Private Sub HomeDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '
         'Populate Combobox with roles
 
 
@@ -140,4 +145,46 @@ Public Class HomeDashboard
 
         MessageBox.Show("All fields have been cleared.", "Clear Form", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+
+
+
+    Protected Overrides ReadOnly Property CreateParams As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ClassStyle = cp.ClassStyle Or &H20000 ' CS_DROPSHADOW
+            Return cp
+        End Get
+    End Property
+
+
+    Private Sub Panel1_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+        ' Define the gradient colors
+        Dim color1 As Color = ColorTranslator.FromHtml("#98C1D9") ' Light Blue
+        Dim color2 As Color = ColorTranslator.FromHtml("#4E95C3") ' Darker Blue
+
+        ' Create a linear gradient brush
+        Dim gradientBrush As New LinearGradientBrush(Panel1.ClientRectangle, color1, color2, LinearGradientMode.Vertical)
+
+        ' Fill the panel with the gradient
+        e.Graphics.FillRectangle(gradientBrush, Panel1.ClientRectangle)
+
+        ' Dispose of the brush to release resources
+        gradientBrush.Dispose()
+    End Sub
+    Protected Overrides Sub OnPaint(e As PaintEventArgs)
+        MyBase.OnPaint(e)
+
+        ' Define your colors
+        Dim color1 As Color = ColorTranslator.FromHtml("#F89B57")
+        Dim color2 As Color = ColorTranslator.FromHtml("#FFE4BF")
+
+        ' Create a linear gradient brush
+        Using gradientBrush As New LinearGradientBrush(Me.ClientRectangle, color1, color2, 255)
+            ' Fill the form with the gradient
+            e.Graphics.FillRectangle(gradientBrush, Me.ClientRectangle)
+        End Using ' Automatically disposes the brush
+    End Sub
+
+
 End Class

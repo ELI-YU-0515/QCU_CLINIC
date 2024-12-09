@@ -120,7 +120,7 @@ Partial Class List
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(75, 518)
+        Me.Button1.Location = New System.Drawing.Point(67, 529)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 35)
         Me.Button1.TabIndex = 5
@@ -129,7 +129,7 @@ Partial Class List
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(208, 518)
+        Me.Button2.Location = New System.Drawing.Point(200, 529)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(114, 35)
         Me.Button2.TabIndex = 5
@@ -138,7 +138,7 @@ Partial Class List
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(351, 518)
+        Me.Button3.Location = New System.Drawing.Point(343, 529)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(114, 35)
         Me.Button3.TabIndex = 5
@@ -147,7 +147,7 @@ Partial Class List
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(654, 94)
+        Me.TextBox1.Location = New System.Drawing.Point(657, 119)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(204, 26)
         Me.TextBox1.TabIndex = 6
@@ -156,7 +156,7 @@ Partial Class List
         '
         Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.Location = New System.Drawing.Point(871, 90)
+        Me.Button4.Location = New System.Drawing.Point(874, 115)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(35, 35)
         Me.Button4.TabIndex = 5
@@ -165,10 +165,10 @@ Partial Class List
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Amiri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(50, -19)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(64, 48)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(183, 146)
+        Me.Label1.Size = New System.Drawing.Size(154, 39)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Records"
         '
@@ -177,7 +177,7 @@ Partial Class List
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.Label2.Location = New System.Drawing.Point(205, 57)
+        Me.Label2.Location = New System.Drawing.Point(224, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 16)
         Me.Label2.TabIndex = 7

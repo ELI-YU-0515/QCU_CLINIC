@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckBoxShowPassword = New System.Windows.Forms.CheckBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -33,7 +34,6 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckBoxShowPassword = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,23 +56,37 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(417, 496)
         Me.Panel1.TabIndex = 0
         '
+        'CheckBoxShowPassword
+        '
+        Me.CheckBoxShowPassword.AutoSize = True
+        Me.CheckBoxShowPassword.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBoxShowPassword.Location = New System.Drawing.Point(179, 297)
+        Me.CheckBoxShowPassword.Name = "CheckBoxShowPassword"
+        Me.CheckBoxShowPassword.Size = New System.Drawing.Size(154, 24)
+        Me.CheckBoxShowPassword.TabIndex = 4
+        Me.CheckBoxShowPassword.Text = "Show Password"
+        Me.CheckBoxShowPassword.UseVisualStyleBackColor = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Amiri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(110, 19)
+        Me.Label5.Location = New System.Drawing.Point(121, 65)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(236, 146)
+        Me.Label5.Size = New System.Drawing.Size(199, 39)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "QCU Clinic"
         '
         'btnReset
         '
-        Me.btnReset.BackColor = System.Drawing.Color.Red
-        Me.btnReset.Location = New System.Drawing.Point(239, 365)
+        Me.btnReset.BackColor = System.Drawing.Color.Firebrick
+        Me.btnReset.FlatAppearance.BorderSize = 0
+        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReset.ForeColor = System.Drawing.Color.Black
+        Me.btnReset.Location = New System.Drawing.Point(246, 365)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(87, 32)
         Me.btnReset.TabIndex = 2
@@ -81,7 +95,10 @@ Partial Class Form1
         '
         'btnLogin
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.Lime
+        Me.btnLogin.BackColor = System.Drawing.Color.Teal
+        Me.btnLogin.FlatAppearance.BorderSize = 0
+        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogin.ForeColor = System.Drawing.Color.Black
         Me.btnLogin.Location = New System.Drawing.Point(119, 365)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(87, 32)
@@ -107,6 +124,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(48, 252)
         Me.Label3.Name = "Label3"
@@ -117,6 +135,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(139, 420)
         Me.Label4.Name = "Label4"
@@ -127,6 +146,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(43, 195)
         Me.Label2.Name = "Label2"
@@ -139,22 +159,12 @@ Partial Class Form1
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(84, 74)
+        Me.PictureBox1.Location = New System.Drawing.Point(-15, -10)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(334, 324)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.Size = New System.Drawing.Size(536, 516)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
-        '
-        'CheckBoxShowPassword
-        '
-        Me.CheckBoxShowPassword.AutoSize = True
-        Me.CheckBoxShowPassword.Location = New System.Drawing.Point(179, 297)
-        Me.CheckBoxShowPassword.Name = "CheckBoxShowPassword"
-        Me.CheckBoxShowPassword.Size = New System.Drawing.Size(154, 24)
-        Me.CheckBoxShowPassword.TabIndex = 4
-        Me.CheckBoxShowPassword.Text = "Show Password"
-        Me.CheckBoxShowPassword.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -163,8 +173,8 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(930, 496)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(5)

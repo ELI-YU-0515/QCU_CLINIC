@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Drawing.Drawing2D
+Imports MySql.Data.MySqlClient
 
 
 Public Class Staff
@@ -54,7 +55,7 @@ Public Class Staff
         Me.Close()
     End Sub
 
-    Private Sub btnPatientAdd_Click_1(sender As Object, e As EventArgs) Handles btnPatientAdd.Click
+    Private Sub btnPatientAdd_Click_1(sender As Object, e As EventArgs)
         'Connection to Database
         Dim connStr As String = "server=localhost; userid=root; password=; database=qcu_clinic; port=3306"
         Dim sqlConn As New MySqlConnection(connStr)
@@ -105,7 +106,7 @@ Public Class Staff
         End Try
 
     End Sub
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+    Private Sub btnClear_Click(sender As Object, e As EventArgs)
         txtEmployeeID.Clear()
         txtSurname.Clear()
         txtFirstname.Clear()
@@ -134,5 +135,44 @@ Public Class Staff
         DtpBirthday.Value = DateTime.Now
 
         MessageBox.Show("All fields have been cleared.", "Clear Form", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+
+
+    Protected Overrides ReadOnly Property CreateParams As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ClassStyle = cp.ClassStyle Or &H20000 ' CS_DROPSHADOW
+            Return cp
+        End Get
+    End Property
+
+
+    Private Sub Panel1_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+        ' Define the gradient colors
+        Dim color1 As Color = ColorTranslator.FromHtml("#98C1D9") ' Light Blue
+        Dim color2 As Color = ColorTranslator.FromHtml("#4E95C3") ' Darker Blue
+
+        ' Create a linear gradient brush
+        Dim gradientBrush As New LinearGradientBrush(Panel1.ClientRectangle, color1, color2, LinearGradientMode.Vertical)
+
+        ' Fill the panel with the gradient
+        e.Graphics.FillRectangle(gradientBrush, Panel1.ClientRectangle)
+
+        ' Dispose of the brush to release resources
+        gradientBrush.Dispose()
+    End Sub
+    Protected Overrides Sub OnPaint(e As PaintEventArgs)
+        MyBase.OnPaint(e)
+
+        ' Define your colors
+        Dim color1 As Color = ColorTranslator.FromHtml("#F89B57")
+        Dim color2 As Color = ColorTranslator.FromHtml("#FFE4BF")
+
+        ' Create a linear gradient brush
+        Using gradientBrush As New LinearGradientBrush(Me.ClientRectangle, color1, color2, 255)
+            ' Fill the form with the gradient
+            e.Graphics.FillRectangle(gradientBrush, Me.ClientRectangle)
+        End Using ' Automatically disposes the brush
     End Sub
 End Class

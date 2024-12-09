@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Drawing.Drawing2D
+Imports MySql.Data.MySqlClient
 
 Public Class Register
 
@@ -36,7 +37,7 @@ Public Class Register
 
                 'Insert user into the database
                 Dim query As String = "INSERT INTO users (Lastname,Firstname,MI,Age,Gender,Birthday,Role,Username,Password)" &
-                    "VALUES (@lastname,firstname,@mi,@age,@gender,@birthday,@role,@username,@password)"
+                    "VALUES (@lastname,@firstname,@mi,@age,@gender,@birthday,@role,@username,@password)"
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@lastname", lastName)
                     cmd.Parameters.AddWithValue("@firstname", firstName)
@@ -61,6 +62,8 @@ Public Class Register
         Catch ex As Exception
             MessageBox.Show($"An error occured: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+        ClearFields()
+
     End Sub
     Private Sub ClearFields()
         txtLastName.Clear()
@@ -81,5 +84,42 @@ Public Class Register
         cmbRole.Items.Add("Admin")
         cmbRole.Items.Add("Nurse")
 
+    End Sub
+
+
+
+    Protected Overrides ReadOnly Property CreateParams As CreateParams
+        Get
+            Dim cp As CreateParams = MyBase.CreateParams
+            cp.ClassStyle = cp.ClassStyle Or &H20000 ' CS_DROPSHADOW
+            Return cp
+        End Get
+    End Property
+
+
+    Protected Overrides Sub OnPaint(e As PaintEventArgs)
+        MyBase.OnPaint(e)
+
+        ' Define your colors
+        Dim color1 As Color = ColorTranslator.FromHtml("#F89B57")
+        Dim color2 As Color = ColorTranslator.FromHtml("#FFE4BF")
+
+        ' Create a linear gradient brush
+        Using gradientBrush As New LinearGradientBrush(Me.ClientRectangle, color1, color2, 255)
+            ' Fill the form with the gradient
+            e.Graphics.FillRectangle(gradientBrush, Me.ClientRectangle)
+        End Using ' Automatically disposes the brush
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+        ' Define the gradient colors
+        Dim color1 As Color = ColorTranslator.FromHtml("#98C1D9") ' Light Blue
+        Dim color2 As Color = ColorTranslator.FromHtml("#4E95C3") ' Darker Blue
+
+        ' Create a linear gradient brush
+        Using gradientBrush As New LinearGradientBrush(Panel1.ClientRectangle, color1, color2, LinearGradientMode.Vertical)
+            ' Fill the panel with the gradient
+            e.Graphics.FillRectangle(gradientBrush, Panel1.ClientRectangle)
+        End Using ' Automatically disposes of the brush
     End Sub
 End Class
